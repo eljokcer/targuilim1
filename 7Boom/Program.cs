@@ -1,23 +1,30 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Factorial
+namespace _7Boom
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int sum = 1, i = 1;
+            int i = 1;
             Console.WriteLine("Enter a number");
             int n = int.Parse(Console.ReadLine());
-            while (i<=n)
+            while (i <= n)
             {
-                sum *= i++; 
+                if (i % 7 == 0)
+                {
+                    Console.WriteLine("Boom");
+                }
+                else
+                {
+                    Console.WriteLine(i);
+                }
+                i++;
             }
-            Console.WriteLine(sum);
         }
     }
 }
